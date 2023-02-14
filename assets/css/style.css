@@ -240,7 +240,7 @@ input:active {
 }
 
 
-@media (max-width: 376px) {
+@media (max-width: 600px) {
     body {
         overflow: visible;
     }

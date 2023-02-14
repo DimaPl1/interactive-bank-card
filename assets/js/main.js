@@ -24,7 +24,7 @@ inputName.addEventListener('input', (e) => {
         cardName.textContent = inputName.value;
     }
 
-    if (window.matchMedia("(max-width: 376px)").matches) {
+    if (window.matchMedia("(max-width: 426px)").matches) {
         if (inputName.value.length > 14){
             cardName.textContent = inputName.value.substring(0, 12) + "...";
         } 
