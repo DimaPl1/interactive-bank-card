@@ -293,6 +293,9 @@ input:active {
     .cvc-number input {
         max-width: 100px;
     }
+    .card__date {
+        margin-left: 20px;
+    }
     .field__name input, .field__number input, .date input, .cvc-number input {
         font-size: 15px;
         padding: 15px;
@@ -301,5 +304,11 @@ input:active {
         font-size: 20px;
         padding: 15px;
         border-radius: 10px;
+    }
+}
+
+@media (max-width: 321px) {
+    .card-back {
+        left: 40px;
     }
 }

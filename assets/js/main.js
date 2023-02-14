@@ -23,6 +23,12 @@ inputName.addEventListener('input', (e) => {
     } else {
         cardName.textContent = inputName.value;
     }
+
+    if (window.matchMedia("(max-width: 376px)").matches) {
+        if (inputName.value.length > 14){
+            cardName.textContent = inputName.value.substring(0, 12) + "...";
+        } 
+    }
 });
 
 const exlude = [8, 35, 36, 37, 39, 46]; // White listed keyCodes
