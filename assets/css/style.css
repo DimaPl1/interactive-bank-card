@@ -239,15 +239,7 @@ input:active {
     display: none;
 }
 
-/* @media (max-width: 1500px) {
-    .card-front {
-        z-index: 40;
-    }
-    .container {
-        justify-content: center;
-        width: 65%;
-    }
-} */
+
 
 @media (max-width: 1441px) {
     .container {
