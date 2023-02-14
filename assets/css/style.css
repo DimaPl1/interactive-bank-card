@@ -239,6 +239,36 @@ input:active {
     display: none;
 }
 
+/* @media (max-width: 1500px) {
+    .card-front {
+        z-index: 40;
+    }
+    .container {
+        justify-content: center;
+        width: 65%;
+    }
+} */
+
+@media (max-width: 1441px) {
+    .container {
+        justify-content: flex-end;
+        width: 65%;
+    }
+    .img-bg {
+        height: 100vh;
+        width: 100%;
+    }
+    .card-front {
+        top: 40px;
+        left: 10px;
+        z-index: 40;
+    }
+    .card-back {
+        left: 50px;
+        bottom: 50px;
+    }
+}
+
 
 @media (max-width: 600px) {
     body {
