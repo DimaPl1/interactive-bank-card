@@ -1,0 +1,305 @@
+:root {
+    /* Primary */
+    --primary-input-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --primary-red-error-input: hsl(0, 100%, 66%);
+    /* Neutral */
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    display: block;
+}
+
+img {
+    display: block;
+}
+
+span {
+    display: inline-block;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.left-side {
+    max-width: 40%;
+    height: 100vh;
+    position: relative;
+}
+
+.img-bg {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.form label {
+    font-size: 14px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    cursor: pointer;
+}
+
+.form input {
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid var(--light-grayish-violet);
+}
+
+.field__number {
+    padding: 20px 0;
+}
+
+.field__name input, .field__number input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.field__date {
+    display: flex;
+}
+
+.js-validate-error-label {
+    font-size: 14px;
+}
+
+
+.field__date .js-validate-error-label {
+    display: flex;
+}
+
+.date input {
+    max-width: 70px;
+}
+
+.date input:not(:last-child){
+    margin-right: 5px;
+}
+
+.date input, .cvc-number input {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.cvc-number {
+    margin-left: 20px;
+}
+
+input:focus {
+    outline: none;
+    color: var(--very-dark-violet);
+    border: 2px solid var(--very-dark-violet);
+}
+input:active {
+    outline: none;
+    border: 2px solid var(--very-dark-violet);
+}
+
+
+.form input.input-error {
+    border: 2px solid var(--primary-red-error-input);
+}
+
+.form-error {
+    font-size: 15px;
+    color: var(--primary-red-error-input);
+}
+
+.confirm, .continue {
+    width: 100%;
+    margin-top: 30px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--very-dark-violet);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.confirm:hover, .continue:hover {
+    background-color: var(--dark-grayish-violet);
+}
+
+.card-front {
+    width: 447px;
+    height: 216px;
+    background-image: url('../../images/bg-card-front.png');
+    position: absolute;
+    right: -100px;
+    bottom: 55%;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.card-front-wrapper {
+    padding: 25px 30px;
+}
+
+.card-front-wrapper img {
+    width: 20%;
+}
+
+
+.card__number {
+    margin: 40px 0 20px 0;
+    color: #fff;
+    font-size: 1.95rem;
+    letter-spacing: 2px;
+}
+
+.card__name, .card__date {
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.card-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.card-back {
+    width: 447px;
+    height: 245px;
+    background-image: url('../../images/bg-card-back.png');
+    position: absolute;
+    right: -190px;
+    bottom: 100px;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.card-back span {
+    position: absolute;
+    color: #fff;
+    top: 110px;
+    right: 55px;
+}
+
+/* menu-complete */
+
+.menu-complete {
+    width: 350px;
+}
+
+
+.complete__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.comlete__title {
+    margin-top: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    color: var(--very-dark-violet);
+}
+
+.comlete__descr {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--dark-grayish-violet);
+}
+
+.continue {
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.none {
+    display: none;
+}
+
+
+@media (max-width: 376px) {
+    body {
+        overflow: visible;
+    }
+    main {
+        display: block;
+    }
+    .left-side {
+        max-width: 100%;
+        height: 250px;
+    }
+    .img-bg {
+        width: 100%;
+        height: 250px;
+    }
+    .card-front {
+        width: 275px;
+        top: 130px;
+        left: 10px;
+        background-size: 275px;
+        background-repeat: no-repeat;
+        z-index: 20;
+    }
+    .card-front-wrapper {
+        padding: 15px;
+    }
+    .card__number {
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 3.5px;
+    }
+    .card-back {
+        width: 275px;
+        left: 75px;
+        bottom: -40px;
+        background-size: 275px;
+        background-repeat: no-repeat;
+    }
+    #cvc-num {
+        top: 63px;
+        right: 35px;
+    }
+    .container {
+        width: 100%;
+        margin-top: 40px;
+        padding: 15px;
+    }
+    .cvc-number {
+        max-width: 100px;
+    }
+    .cvc-number input {
+        max-width: 100px;
+    }
+    .field__name input, .field__number input, .date input, .cvc-number input {
+        font-size: 15px;
+        padding: 15px;
+    }
+    .confirm, .continue {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+}
