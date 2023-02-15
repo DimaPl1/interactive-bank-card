@@ -114,11 +114,22 @@ new JustValidate('.form', {
         },
     },
     submitHandler: function (){
-        form.classList.add('none');
-        menuComplete.classList.remove('none');
-        menuComplete.classList.add('animate__animated', 'animate__backInDown');
+        getFormValues();
+        addAnimate();
     }
 });
+
+function addAnimate(){
+    form.classList.add('none');
+    menuComplete.classList.remove('none');
+    menuComplete.classList.add('animate__animated', 'animate__backInDown');
+}
+
+function getFormValues(){
+    const formData = new FormData(form);
+    const values = Object.fromEntries(formData);
+    console.log(values);
+}
 
 
 
