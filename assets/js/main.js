@@ -130,7 +130,3 @@ function getFormValues(){
     const values = Object.fromEntries(formData);
     console.log(values);
 }
-
-
-
-// TODO: Реализовать получение данных с формы (для себя практика)
